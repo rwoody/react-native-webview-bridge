@@ -67,7 +67,7 @@ var WebViewBridge = React.createClass({
     };
   },
 
-  
+
   componentWillMount: function() {
     DeviceEventEmitter.addListener("webViewBridgeMessage", (body) => {
       const { onBridgeMessage } = this.props;
@@ -131,7 +131,7 @@ var WebViewBridge = React.createClass({
       />;
 
     return (
-      <View style={styles.container}>
+      <View style={[styles.container, this.props.containerStyle]}>
         {webView}
         {otherView}
       </View>
